@@ -104,7 +104,7 @@
         },
         {
             "type":"block",
-            "tag":"reject"
+            "tag":"REJECT"
         },
         {
             "type": "vless",
