@@ -99,10 +99,6 @@
             "tag": "DIRECT"
         },
         {
-            "type": "block",
-            "tag": "REJECT"
-        },
-        {
             "type": "dns",
             "tag": "dns-out"
         },
