@@ -98,10 +98,6 @@
             "tag": "DIRECT"
         },
         {
-            "type": "dns",
-            "tag": "dns-out"
-        },
-        {
             "type":"block",
             "tag":"REJECT"
         },
@@ -1445,7 +1441,7 @@
             },
             {
                 "protocol": "dns",
-                "outbound": "dns-out"
+                "action":"hijack-dns"
             },
             {
                 "action":"sniff"
