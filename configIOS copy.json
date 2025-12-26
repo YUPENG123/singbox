@@ -103,6 +103,10 @@
             "tag": "dns-out"
         },
         {
+            "type":"block",
+            "tag":"block"
+        },
+        {
             "type": "vless",
             "tag": "原生地址-443-WS-TLS",
             "server": "yp1.yupeng123.dpdns.org",
