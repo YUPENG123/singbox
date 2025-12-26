@@ -1026,7 +1026,7 @@
                 "频道@kejiland00-443-WS-TLS 7"
             ],
             "url": "http://www.gstatic.com/generate_204",
-            "interval": "1440"
+            "interval": "1440m"
         },
         {
             "type": "selector",
