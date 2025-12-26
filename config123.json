@@ -1,0 +1,1192 @@
+{
+    "log": {
+        "disabled": false,
+        "level": "info",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns_proxy",
+                "address": "tls://1.1.1.1",
+                "address_resolver": "dns_resolver"
+            },
+            {
+                "tag": "dns_direct",
+                "address": "h3://dns.alidns.com/dns-query",
+                "address_resolver": "dns_resolver",
+                "detour": "DIRECT"
+            },
+            {
+                "tag": "dns_fakeip",
+                "address": "fakeip"
+            },
+            {
+                "tag": "dns_resolver",
+                "address": "223.5.5.5",
+                "detour": "DIRECT"
+            },
+            {
+                "tag": "block",
+                "address": "rcode://success"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": [
+                    "any"
+                ],
+                "server": "dns_resolver"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "server": "dns_block",
+                "disable_cache": true
+            },
+            {
+                "geosite": [
+                    "geolocation-!cn"
+                ],
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "dns_fakeip"
+            },
+            {
+                "geosite": [
+                    "geolocation-!cn"
+                ],
+                "server": "dns_proxy"
+            }
+        ],
+        "final": "dns_direct",
+        "independent_cache": true,
+        "fakeip": {
+            "enabled": true,
+            "inet4_range": "198.18.0.0/15"
+        }
+    },
+    "ntp": {
+        "enabled": true,
+        "server": "time.apple.com",
+        "server_port": 123,
+        "interval": "30m",
+        "detour": "DIRECT"
+    },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "",
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "mtu": 0,
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": false,
+      "stack": "mixed"
+    }
+  ],
+    "outbounds": [
+        {
+        "type": "urltest",
+        "tag": "🚀 节点选择",
+        "url": "",
+        "interval": "3m",
+        "tolerance": 150,
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "🎈 自动选择",
+            "原生地址-443-WS-TLS",
+            "cloudflare.182682.xyz-443-WS-TLS",
+            "speed.marisalnc.com-443-WS-TLS",
+            "freeyx.cloudflare88.eu.org-443-WS-TLS",
+            "bestcf.top-443-WS-TLS",
+            "cdn.2020111.xyz-443-WS-TLS",
+            "cfip.cfcdn.vip-443-WS-TLS",
+            "cf.0sm.com-443-WS-TLS",
+            "cf.090227.xyz-443-WS-TLS",
+            "cf.zhetengsha.eu.org-443-WS-TLS",
+            "cloudflare.9jy.cc-443-WS-TLS",
+            "cf.zerone-cdn.pp.ua-443-WS-TLS",
+            "cfip.1323123.xyz-443-WS-TLS",
+            "cnamefuckxxs.yuchen.icu-443-WS-TLS",
+            "cloudflare-ip.mofashi.ltd-443-WS-TLS",
+            "115155.xyz-443-WS-TLS",
+            "🇺🇸 cname.xirancdn.us-443-WS-TLS",
+            "f3058171cad.002404.xyz-443-WS-TLS",
+            "8.889288.xyz-443-WS-TLS",
+            "cdn.tzpro.xyz-443-WS-TLS",
+            "cf.877771.xyz-443-WS-TLS",
+            "xn--b6gac.eu.org-443-WS-TLS",
+            "联通-SJC-443-WS-TLS",
+            "联通-SJC-443-WS-TLS 2",
+            "联通-SJC-443-WS-TLS 3",
+            "联通-SJC-443-WS-TLS 4",
+            "联通-SJC-443-WS-TLS 5",
+            "加入频道@kejiland00-443-WS-TLS",
+            "🇨🇳 中国/广东/广州/电信-18080-WS-TLS",
+            "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS",
+            "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS 2",
+            "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS 3",
+            "频道@kejiland00-443-WS-TLS",
+            "频道@kejiland00-443-WS-TLS 2",
+            "频道@kejiland00-443-WS-TLS 3",
+            "频道@kejiland00-443-WS-TLS 4",
+            "频道@kejiland00-443-WS-TLS 5",
+            "频道@kejiland00-443-WS-TLS 6",
+            "频道@kejiland00-443-WS-TLS 7"
+        ]
+        },
+        {
+        "type": "urltest",
+        "tag": "🎈 自动选择",
+        "url": "https://www.gstatic.com/generate_204",
+        "interval": "3m",
+        "tolerance": 150,
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "原生地址-443-WS-TLS",
+            "cloudflare.182682.xyz-443-WS-TLS",
+            "speed.marisalnc.com-443-WS-TLS",
+            "freeyx.cloudflare88.eu.org-443-WS-TLS",
+            "bestcf.top-443-WS-TLS",
+            "cdn.2020111.xyz-443-WS-TLS",
+            "cfip.cfcdn.vip-443-WS-TLS",
+            "cf.0sm.com-443-WS-TLS",
+            "cf.090227.xyz-443-WS-TLS",
+            "cf.zhetengsha.eu.org-443-WS-TLS",
+            "cloudflare.9jy.cc-443-WS-TLS",
+            "cf.zerone-cdn.pp.ua-443-WS-TLS",
+            "cfip.1323123.xyz-443-WS-TLS",
+            "cnamefuckxxs.yuchen.icu-443-WS-TLS",
+            "cloudflare-ip.mofashi.ltd-443-WS-TLS",
+            "115155.xyz-443-WS-TLS",
+            "🇺🇸 cname.xirancdn.us-443-WS-TLS",
+            "f3058171cad.002404.xyz-443-WS-TLS",
+            "8.889288.xyz-443-WS-TLS",
+            "cdn.tzpro.xyz-443-WS-TLS",
+            "cf.877771.xyz-443-WS-TLS",
+            "xn--b6gac.eu.org-443-WS-TLS",
+            "联通-SJC-443-WS-TLS",
+            "联通-SJC-443-WS-TLS 2",
+            "联通-SJC-443-WS-TLS 3",
+            "联通-SJC-443-WS-TLS 4",
+            "联通-SJC-443-WS-TLS 5",
+            "加入频道@kejiland00-443-WS-TLS",
+            "🇨🇳 中国/广东/广州/电信-18080-WS-TLS",
+            "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS",
+            "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS 2",
+            "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS 3",
+            "频道@kejiland00-443-WS-TLS",
+            "频道@kejiland00-443-WS-TLS 2",
+            "频道@kejiland00-443-WS-TLS 3",
+            "频道@kejiland00-443-WS-TLS 4",
+            "频道@kejiland00-443-WS-TLS 5",
+            "频道@kejiland00-443-WS-TLS 6",
+            "频道@kejiland00-443-WS-TLS 7"
+        ]
+        },
+        {
+        "type": "selector",
+        "tag": "🎯 全球直连",
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "direct",
+            "block"
+        ]
+        },
+        {
+        "type": "selector",
+        "tag": "🛑 全球拦截",
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "block",
+            "direct"
+        ]
+        },
+        {
+        "type": "selector",
+        "tag": "🐟 漏网之鱼",
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "🚀 节点选择",
+            "🎯 全球直连"
+        ]
+        },
+        {
+        "type": "selector",
+        "tag": "GLOBAL",
+        "interrupt_exist_connections": true,
+        "outbounds": [
+            "🚀 节点选择",
+            "🎈 自动选择",
+            "🎯 全球直连",
+            "🛑 全球拦截",
+            "🐟 漏网之鱼"
+        ]
+        },
+        {
+        "type": "vless",
+        "tag": "原生地址-443-WS-TLS",
+        "server": "yp1.yupeng123.dpdns.org",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cloudflare.182682.xyz-443-WS-TLS",
+        "server": "cloudflare.182682.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "speed.marisalnc.com-443-WS-TLS",
+        "server": "speed.marisalnc.com",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "freeyx.cloudflare88.eu.org-443-WS-TLS",
+        "server": "freeyx.cloudflare88.eu.org",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "bestcf.top-443-WS-TLS",
+        "server": "bestcf.top",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cdn.2020111.xyz-443-WS-TLS",
+        "server": "cdn.2020111.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cfip.cfcdn.vip-443-WS-TLS",
+        "server": "cfip.cfcdn.vip",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cf.0sm.com-443-WS-TLS",
+        "server": "cf.0sm.com",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cf.090227.xyz-443-WS-TLS",
+        "server": "cf.090227.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cf.zhetengsha.eu.org-443-WS-TLS",
+        "server": "cf.zhetengsha.eu.org",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cloudflare.9jy.cc-443-WS-TLS",
+        "server": "cloudflare.9jy.cc",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cf.zerone-cdn.pp.ua-443-WS-TLS",
+        "server": "cf.zerone-cdn.pp.ua",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cfip.1323123.xyz-443-WS-TLS",
+        "server": "cfip.1323123.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cnamefuckxxs.yuchen.icu-443-WS-TLS",
+        "server": "cnamefuckxxs.yuchen.icu",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cloudflare-ip.mofashi.ltd-443-WS-TLS",
+        "server": "cloudflare-ip.mofashi.ltd",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "115155.xyz-443-WS-TLS",
+        "server": "115155.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "🇺🇸 cname.xirancdn.us-443-WS-TLS",
+        "server": "cname.xirancdn.us",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "f3058171cad.002404.xyz-443-WS-TLS",
+        "server": "f3058171cad.002404.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "8.889288.xyz-443-WS-TLS",
+        "server": "8.889288.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cdn.tzpro.xyz-443-WS-TLS",
+        "server": "cdn.tzpro.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "cf.877771.xyz-443-WS-TLS",
+        "server": "cf.877771.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "xn--b6gac.eu.org-443-WS-TLS",
+        "server": "xn--b6gac.eu.org",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "联通-SJC-443-WS-TLS",
+        "server": "104.17.174.82",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "联通-SJC-443-WS-TLS 2",
+        "server": "104.18.110.142",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "联通-SJC-443-WS-TLS 3",
+        "server": "104.17.46.175",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "联通-SJC-443-WS-TLS 4",
+        "server": "104.16.77.231",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "联通-SJC-443-WS-TLS 5",
+        "server": "104.18.127.237",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "加入频道@kejiland00-443-WS-TLS",
+        "server": "saas.sin.fan",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "🇨🇳 中国/广东/广州/电信-18080-WS-TLS",
+        "server": "14.215.25.250",
+        "server_port": 18080,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS",
+        "server": "20.247.137.183",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS 2",
+        "server": "168.138.165.174",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "🇸🇬 新加坡-频道@kejiland00-443-WS-TLS 3",
+        "server": "34.143.159.175",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "频道@kejiland00-443-WS-TLS",
+        "server": "store.ubi.com",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "频道@kejiland00-443-WS-TLS 2",
+        "server": "cf.130519.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "频道@kejiland00-443-WS-TLS 3",
+        "server": "cf.008500.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "频道@kejiland00-443-WS-TLS 4",
+        "server": "cf.090227.xyz",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "频道@kejiland00-443-WS-TLS 5",
+        "server": "cdns.doon.eu.org",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "频道@kejiland00-443-WS-TLS 6",
+        "server": "sub.danfeng.eu.org",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "vless",
+        "tag": "频道@kejiland00-443-WS-TLS 7",
+        "server": "cf.zhetengsha.eu.org",
+        "server_port": 443,
+        "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+        "transport": {
+            "path": "/?ed=2048",
+            "type": "ws",
+            "headers": {
+            "Host": "yp1.yupeng123.dpdns.org"
+            }
+        },
+        "tls": {
+            "enabled": true,
+            "server_name": "yp1.yupeng123.dpdns.org",
+            "insecure": false
+        },
+        "network": "tcp",
+        "tcp_fast_open": false
+        },
+        {
+        "type": "direct",
+        "tag": "direct"
+        },
+        {
+        "type": "block",
+        "tag": "block"
+        }
+    ],
+    "route": {
+        "rules": [
+        {
+            "action": "sniff",
+            "inbound": "tun-in"
+        },
+        {
+            "action": "hijack-dns",
+            "protocol": "dns"
+        },
+        {
+            "action": "route",
+            "clash_mode": "direct",
+            "outbound": "🎯 全球直连"
+        },
+        {
+            "action": "route",
+            "clash_mode": "global",
+            "outbound": "GLOBAL"
+        },
+        {
+            "action": "route",
+            "network": "icmp",
+            "outbound": "🎯 全球直连"
+        },
+        {
+            "action": "route",
+            "protocol": "quic",
+            "outbound": "🛑 全球拦截"
+        },
+        {
+            "action": "route",
+            "rule_set": [
+            "Category-Ads"
+            ],
+            "outbound": "🛑 全球拦截"
+        },
+        {
+            "action": "route",
+            "rule_set": [
+            "GeoSite-Private"
+            ],
+            "outbound": "🎯 全球直连"
+        },
+        {
+            "action": "route",
+            "rule_set": [
+            "GeoSite-CN"
+            ],
+            "outbound": "🎯 全球直连"
+        },
+        {
+            "action": "route",
+            "rule_set": [
+            "GeoIP-Private"
+            ],
+            "outbound": "🎯 全球直连"
+        },
+        {
+            "action": "route",
+            "rule_set": [
+            "GeoIP-CN"
+            ],
+            "outbound": "🎯 全球直连"
+        },
+        {
+            "action": "route",
+            "rule_set": [
+            "GeoLocation-!CN"
+            ],
+            "outbound": "🚀 节点选择"
+        }
+        ],
+        "rule_set": [
+        {
+            "tag": "Category-Ads",
+            "type": "remote",
+            "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+            "format": "binary",
+            "download_detour": "🎯 全球直连"
+        },
+        {
+            "tag": "GeoIP-Private",
+            "type": "remote",
+            "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs",
+            "format": "binary",
+            "download_detour": "🎯 全球直连"
+        },
+        {
+            "tag": "GeoSite-Private",
+            "type": "remote",
+            "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
+            "format": "binary",
+            "download_detour": "🎯 全球直连"
+        },
+        {
+            "tag": "GeoIP-CN",
+            "type": "remote",
+            "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
+            "format": "binary",
+            "download_detour": "🎯 全球直连"
+        },
+        {
+            "tag": "GeoSite-CN",
+            "type": "remote",
+            "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
+            "format": "binary",
+            "download_detour": "🎯 全球直连"
+        },
+        {
+            "tag": "GeoLocation-!CN",
+            "type": "remote",
+            "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
+            "format": "binary",
+            "download_detour": "🎯 全球直连"
+        }
+        ],
+        "auto_detect_interface": true,
+        "final": "🐟 漏网之鱼"
+    },
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "store_fakeip": true
+        },
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "external_ui": "dashboard"
+        }
+    }
+}
