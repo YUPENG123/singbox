@@ -865,7 +865,7 @@
                 "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
             ],
             "url": "http://www.gstatic.com/generate_204",
-            "interval": "24h"
+            "interval": "3m"
         },
         {
             "type": "selector",
