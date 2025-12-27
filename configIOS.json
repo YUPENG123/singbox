@@ -571,7 +571,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS",
-            "server": "104.18.206.238",
+            "server": "104.17.30.50",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -592,7 +592,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS 2",
-            "server": "104.17.47.173",
+            "server": "104.16.61.117",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -613,7 +613,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS 3",
-            "server": "104.19.255.80",
+            "server": "104.16.190.76",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -634,7 +634,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS 4",
-            "server": "104.17.95.88",
+            "server": "104.18.190.195",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -655,7 +655,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS 5",
-            "server": "104.18.174.254",
+            "server": "104.18.78.187",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
