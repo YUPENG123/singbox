@@ -571,7 +571,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS",
-            "server": "104.17.30.50",
+            "server": "104.18.238.71",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -592,7 +592,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS 2",
-            "server": "104.16.61.117",
+            "server": "104.18.206.42",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -613,7 +613,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS 3",
-            "server": "104.16.190.76",
+            "server": "104.16.77.178",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -634,7 +634,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS 4",
-            "server": "104.18.190.195",
+            "server": "104.16.207.96",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -655,7 +655,7 @@
         {
             "type": "vless",
             "tag": "联通-SJC-443-WS-TLS 5",
-            "server": "104.18.78.187",
+            "server": "104.16.14.8",
             "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
@@ -717,9 +717,9 @@
         },
         {
             "type": "vless",
-            "tag": "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-            "server": "103.117.101.168",
-            "server_port": 56457,
+            "tag": "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+            "server": "20.247.137.183",
+            "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
                 "path": "/?ed=2048",
@@ -738,9 +738,30 @@
         },
         {
             "type": "vless",
-            "tag": "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-            "server": "103.117.101.97",
-            "server_port": 42000,
+            "tag": "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+            "server": "168.138.165.174",
+            "server_port": 443,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+            "server": "34.143.159.175",
+            "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
                 "path": "/?ed=2048",
@@ -762,6 +783,195 @@
             "tag": "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
             "server": "103.135.250.164",
             "server_port": 27015,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+            "server": "212.50.253.184",
+            "server_port": 33033,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+            "server": "206.190.232.192",
+            "server_port": 10086,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+            "server": "23.106.131.150",
+            "server_port": 18614,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+            "server": "23.106.131.104",
+            "server_port": 6060,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇰🇷 KR-六百佬维护-443-WS-TLS",
+            "server": "kr.333.cc.cd",
+            "server_port": 443,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+            "server": "sg.444.cc.cd",
+            "server_port": 443,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇺🇸 US-六百佬维护-443-WS-TLS",
+            "server": "us.555.cc.cd",
+            "server_port": 443,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇨🇳 CN-六百佬维护-443-WS-TLS",
+            "server": "cn.666.cc.cd",
+            "server_port": 443,
+            "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
+            "transport": {
+                "path": "/?ed=2048",
+                "type": "ws",
+                "headers": {
+                    "Host": "yp1.yupeng123.dpdns.org"
+                }
+            },
+            "tls": {
+                "enabled": true,
+                "server_name": "yp1.yupeng123.dpdns.org",
+                "insecure": false
+            },
+            "network": "tcp",
+            "tcp_fast_open": false
+        },
+        {
+            "type": "vless",
+            "tag": "🇬🇧 UK-六百佬维护-443-WS-TLS",
+            "server": "uk.777.cc.cd",
+            "server_port": 443,
             "uuid": "eb19f904-2a70-41d0-8187-e425879aee8e",
             "transport": {
                 "path": "/?ed=2048",
@@ -822,9 +1032,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ]
         },
         {
@@ -860,9 +1080,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ],
             "url": "http://www.gstatic.com/generate_204",
             "interval": "3m"
@@ -923,9 +1153,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ]
         },
         {
@@ -963,9 +1203,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ]
         },
         {
@@ -1014,9 +1264,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ]
         },
         {
@@ -1054,9 +1314,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ]
         },
         {
@@ -1095,9 +1365,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ]
         },
         {
@@ -1161,9 +1441,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ]
         },
         {
@@ -1171,8 +1461,6 @@
             "tag": "🇭🇰 香港节点",
             "outbounds": [
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
                 "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
             ]
         },
@@ -1184,7 +1472,8 @@
                 "联通-SJC-443-WS-TLS 2",
                 "联通-SJC-443-WS-TLS 3",
                 "联通-SJC-443-WS-TLS 4",
-                "联通-SJC-443-WS-TLS 5"
+                "联通-SJC-443-WS-TLS 5",
+                "🇺🇸 US-六百佬维护-443-WS-TLS"
             ]
         },
         {
@@ -1221,9 +1510,19 @@
                 "联通-SJC-443-WS-TLS 5",
                 "加入频道@kejiland00-443-WS-TLS",
                 "🇭🇰 HK-频道@kejiland00-42000-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-56457-WS-TLS",
-                "🇭🇰 HK-频道@kejiland00-42000-WS-TLS 2",
-                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS"
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 2",
+                "🇸🇬 SG-频道@kejiland00-443-WS-TLS 3",
+                "🇭🇰 HK-频道@kejiland00-27015-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-33033-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-10086-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-18614-WS-TLS",
+                "🇯🇵 JP-频道@kejiland00-6060-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS",
+                "🇰🇷 KR-六百佬维护-443-WS-TLS 2",
+                "🇺🇸 US-六百佬维护-443-WS-TLS",
+                "🇨🇳 CN-六百佬维护-443-WS-TLS",
+                "🇬🇧 UK-六百佬维护-443-WS-TLS"
             ]
         }
     ],
