@@ -99,6 +99,10 @@
       "tag": "DIRECT"
     },
     {
+      "type":"block",
+      "tag":"REJECT"
+    },
+    {
       "type": "vless",
       "tag": "CFnat",
       "server": "127.0.0.1",
